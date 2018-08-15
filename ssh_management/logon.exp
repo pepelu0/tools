@@ -1,0 +1,11 @@
+#!/bin/expect
+set server [lindex $argv 0]
+set user [lindex $argv 1]
+set password [lindex $argv 2]
+spawn ssh $user@$server
+expect {
+"yes/no" { send "yes\r";exp_continue }
+"password:" { send "$password\r" }
+
+}
+interact
