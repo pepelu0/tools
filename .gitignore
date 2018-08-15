@@ -12,3 +12,5 @@ target
 nb-configuration.xml
 
 nbactions-unit-test.xml
+
+servers.conf
